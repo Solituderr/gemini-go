@@ -1,4 +1,4 @@
-module gemini-go
+module github.com/Solituderr/gemini-go
 
 go 1.20
 
