@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	"gemini/client"
+	"github.com/Solituderr/gemini-go/client"
 )
 
 func main() {
