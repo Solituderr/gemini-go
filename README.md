@@ -17,7 +17,7 @@
     import (
         "context"
         "fmt"
-        "gemini/client"
+        "gemini-go/client"
     )
     
     func main() {
@@ -36,7 +36,7 @@
     
     ```
 
-Stream Mode
+3. Stream Mode
 
 
 #### Implement
