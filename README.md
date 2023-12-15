@@ -2,32 +2,39 @@
 
 #### Use
 
-Simple Get Text Reply
+1. add ```.env``` file in the root dir (like this)
 
-```go
-package main
+    ```yaml
+   API_KEY=your_apikey
+    PROXY_URL=http://127.0.0.1:7890
+   ```
 
-import (
-	"context"
-	"fmt"
-	"gemini/client"
-)
+2. Simple Get Text Reply
 
-func main() {
-	ctx, cancel := context.WithCancel(context.Background())
-	tx := client.Init().GetTextFunc()
-	contents := []client.Content{
-		{
-			Role:  "user",
-			Parts: []client.Text{{"帮我写一段故事"}},
-		},
-	}
-	s := tx.Chat(contents, ctx)
-	fmt.Println(s)
-	cancel()
-}
-
-```
+    ```go
+    package main
+    
+    import (
+        "context"
+        "fmt"
+        "gemini/client"
+    )
+    
+    func main() {
+        ctx, cancel := context.WithCancel(context.Background())
+        tx := client.Init().GetTextFunc()
+        contents := []client.Content{
+            {
+                Role:  "user",
+                Parts: []client.Text{{"帮我写一段故事"}},
+            },
+        }
+        s := tx.Chat(contents, ctx)
+        fmt.Println(s)
+        cancel()
+    }
+    
+    ```
 
 Stream Mode
 
@@ -37,3 +44,7 @@ Stream Mode
 - [x] Common Msg Reply
 - [x] Stream Msg Reply
 - [ ] Image Vision
+
+#### Notice
+
+change vpn area to USA
